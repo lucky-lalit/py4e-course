@@ -15,21 +15,21 @@
 fname = input('Enter the file name: ')
 count = 0
 fhand = open(fname)
-sum = 0
+total = 0
 
 # inp = fhand.read()
 for line in fhand:
     if line.startswith('X-DSPAM-Confidence:'):
         # print(line)
-        line1 = line.find(':')
+        colon_i = line.find(':')
         # print('debug1',line1)
-        line2 = line[line1 + 1:]
-        line3 = line2.strip()
-        final_line = float(line3)
+        float_str = line[colon_i + 1:]
+        float_str = float_str.strip()
+        num_f = float(float_str)
         # print(sum)
-        sum = sum + final_line
+        total = total + num_f
         # print(sum)
 
         count = count + 1
 # print(count)
-print('Average spam confidence: ',sum/count)
+print('Average spam confidence: ',total/count)
