@@ -1,5 +1,8 @@
 # practice 1
-# fhand = open('mbox.txt','r')
+fhand = open('mbox.txt','r')
+list_of_lines = fhand.readlines()
+print(type(list_of_lines),list_of_lines[0])
+# print(list_of_lines)
 # count = 0
 # for line in fhand:
 #     count = count + 1
