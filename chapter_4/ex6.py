@@ -19,6 +19,6 @@ try:
     rate=float(rate)
     # print('checking hour and rate',type(hour),type(rate))
     pay = computepay(hour,rate)
-    print('pay: ',pay)
+    print('pay',pay)
 except:
     print("Error, please enter numeric input")
